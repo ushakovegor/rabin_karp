@@ -1,4 +1,3 @@
-
 def toint(nucleobase):
     if nucleobase == 'A':
         return 0
