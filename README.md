@@ -1,7 +1,7 @@
 # My version of Rabin-Karp algorithm
 ## 1.Description
 The Rabin-Karp algorithm is a string search algorithm that searches for a substring, in the main string using hashing.  
-Program return index from which substring starting in the main string or 'Not found' if no substring in the main string  
+Program return index from which substring starting in the main string or 'Not found' if no substring in the main string.  
 For example:
 1) The main string: ACGCACTGAC  
    Substring: ACT  
