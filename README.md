@@ -6,6 +6,7 @@ Limitations:
 1) Input strings can include only 'A', 'G', 'C', 'T'.  
 2) Length of each strings can't exceed 32.  
 3) Length of the substring <= length of the main string.  
+
 For example:
 1) The main string: ACGCACTGAC  
    Substring: ACT  
