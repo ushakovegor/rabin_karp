@@ -33,9 +33,8 @@ def RabinKarp(t, p):
     for i in range(len_t - len_p):
         if M_hash == N_hash:
             return i
-        N_hash = (N_hash % n) * A +  toint(t[len_p + i])
+        N_hash = (N_hash % n) * A + toint(t[len_p + i])
     return 'Not found'
-
 
 
 def main():
@@ -43,8 +42,6 @@ def main():
         t = inputs.readline().strip()
         p = inputs.readline().strip()
     print(RabinKarp(t, p))
-
-
 
 
 if __name__ == '__main__':
