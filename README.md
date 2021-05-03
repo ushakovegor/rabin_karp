@@ -1,7 +1,7 @@
 # My version of Rabin-Karp algorithm
 ## 1.Description
 The Rabin-Karp algorithm is a string search algorithm that searches for a substring, in the main string using hashing.  
-Program returns index from which substring starts in the main string or 'Not found' if substring is not found in the main string.  
+Program returns index from which substring starts in the main string or 'Not found' if the substring is not found in the main string.  
 Limitations:  
 1) Input strings can include only 'A', 'G', 'C', 'T'.  
 2) Length of each strings can't exceed 32.  
