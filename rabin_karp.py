@@ -25,7 +25,7 @@ def get_hash(p, l, r):
     l - left border
     r - right border (not included)
     n - hash
-    
+
     return hash of slice of string
     '''
     global A
@@ -40,10 +40,10 @@ def RabinKarp(t, p):
     '''
     A - base of n-number system
     N_hash - hash of slice of the main string
-    M_hash - hash of substring
+    M_hash - hash of the substring
 
     return index from which substring starting in the main string
-    or 'Not found' if no substring in the main string
+    or 'Not found' if the substring is not found in the main string
     '''
     global A
 
@@ -56,14 +56,13 @@ def RabinKarp(t, p):
         if M_hash == N_hash:
             return i
         #N_hash = (N_hash % n) * A + toint(t[len_p + i])
-        
     return 'Not found'
 
 
 def main():
     '''
-    t - main string
-    p - substring which we should find in the main string
+    t - the main string
+    p - the substring which we should find in the main string
     '''
     with open('inputs.txt', 'r') as inputs:
         t = inputs.readline().strip()
