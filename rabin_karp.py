@@ -50,8 +50,12 @@ def RabinKarp(t, p):
     A = 4
     len_t = len(t)
     len_p = len(p)
+    if len_t <= 0 or len_p <= 0:
+        raise ValueError("Check input nucleobases")
+    elif len_t < len_p:
+        raise ValueError("Check input nucleobases")
     M_hash = get_hash(p, 0, len_p)
-    for i in range(len_t - len_p):
+    for i in range(len_t - len_p + 1):
         N_hash = get_hash(t, i, len_p + i)
         if M_hash == N_hash:
             return i
