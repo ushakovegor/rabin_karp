@@ -50,6 +50,7 @@ def RabinKarp(t, p):
     A = 4
     len_t = len(t)
     len_p = len(p)
+    results = []
     if len_t <= 0 or len_p <= 0:
         raise ValueError("Check input nucleobases")
     elif len_t < len_p:
@@ -57,10 +58,17 @@ def RabinKarp(t, p):
     M_hash = get_hash(p, 0, len_p)
     for i in range(len_t - len_p + 1):
         N_hash = get_hash(t, i, len_p + i)
+        print(t)
+        print(' ' * i + p)
+        print(M_hash)
+        print(N_hash)
+        print('----------------------')
         if M_hash == N_hash:
-            return i
-        #N_hash = (N_hash % n) * A + toint(t[len_p + i])
-    return 'Not found'
+            results.append(i)
+    if results:
+        return results
+    else:
+        return 'Not found'
 
 
 def main():
@@ -71,7 +79,8 @@ def main():
     with open('inputs.txt', 'r') as inputs:
         t = inputs.readline().strip()
         p = inputs.readline().strip()
-    print(RabinKarp(t, p))
+    result = RabinKarp(t, p)
+    print(result)
 
 
 if __name__ == '__main__':
